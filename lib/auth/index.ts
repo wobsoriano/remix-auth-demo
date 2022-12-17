@@ -1,7 +1,7 @@
-import type { AuthOptions } from "@auth/core";
-import { AuthHandler } from "@auth/core";
-import type { ActionArgs, LoaderArgs } from "@remix-run/node";
-import { installCrypto } from "./crypto";
+import type { AuthOptions } from '@auth/core'
+import { AuthHandler } from '@auth/core'
+import type { ActionArgs, LoaderArgs } from '@remix-run/node'
+import { installCrypto } from './crypto'
 
 installCrypto()
 
