@@ -4,8 +4,7 @@ export default function Index() {
       <h1>Remix Auth Example</h1>
       <p>
         This is an example site to demonstrate how to use <a
-          href="https://remix.run/">Remix</a
-        >
+          href="https://remix.run/">Remix </a>
         with <a href="https://authjs.dev/">Auth</a> for authentication.
       </p>
     </div>
