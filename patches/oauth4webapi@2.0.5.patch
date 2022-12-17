@@ -1,0 +1,85 @@
+diff --git a/build/index.js b/build/index.js
+index 30f3b1d217c0d7ca7d5af2f8d4caa736bf997d36..2ac1030cc97012821f423c5e871b704381c5a310 100644
+--- a/build/index.js
++++ b/build/index.js
+@@ -196,7 +196,7 @@ export async function processDiscoveryResponse(expectedIssuerIdentifier, respons
+         throw new TypeError('"expectedIssuer" must be an instance of URL');
+     }
+     if (!(response instanceof Response)) {
+-        throw new TypeError('"response" must be an instance of Response');
++        // throw new TypeError('"response" must be an instance of Response');
+     }
+     if (response.status !== 200) {
+         throw new OPE('"response" is not a conform Authorization Server Metadata response');
+@@ -550,7 +550,7 @@ function wwwAuth(scheme, params) {
+ }
+ export function parseWwwAuthenticateChallenges(response) {
+     if (!(response instanceof Response)) {
+-        throw new TypeError('"response" must be an instance of Response');
++        // throw new TypeError('"response" must be an instance of Response');
+     }
+     if (!response.headers.has('www-authenticate')) {
+         return undefined;
+@@ -580,7 +580,7 @@ export async function processPushedAuthorizationResponse(as, client, response) {
+     assertAs(as);
+     assertClient(client);
+     if (!(response instanceof Response)) {
+-        throw new TypeError('"response" must be an instance of Response');
++        // throw new TypeError('"response" must be an instance of Response');
+     }
+     if (response.status !== 201) {
+         let err;
+@@ -737,7 +737,7 @@ export async function processUserInfoResponse(as, client, expectedSubject, respo
+     assertAs(as);
+     assertClient(client);
+     if (!(response instanceof Response)) {
+-        throw new TypeError('"response" must be an instance of Response');
++        // throw new TypeError('"response" must be an instance of Response');
+     }
+     if (response.status !== 200) {
+         throw new OPE('"response" is not a conform UserInfo Endpoint response');
+@@ -826,7 +826,7 @@ async function processGenericAccessTokenResponse(as, client, response, ignoreIdT
+     assertAs(as);
+     assertClient(client);
+     if (!(response instanceof Response)) {
+-        throw new TypeError('"response" must be an instance of Response');
++        // throw new TypeError('"response" must be an instance of Response');
+     }
+     if (response.status !== 200) {
+         let err;
+@@ -1052,7 +1052,7 @@ export async function revocationRequest(as, client, token, options) {
+ }
+ export async function processRevocationResponse(response) {
+     if (!(response instanceof Response)) {
+-        throw new TypeError('"response" must be an instance of Response');
++        // throw new TypeError('"response" must be an instance of Response');
+     }
+     if (response.status !== 200) {
+         let err;
+@@ -1093,7 +1093,7 @@ export async function processIntrospectionResponse(as, client, response) {
+     assertAs(as);
+     assertClient(client);
+     if (!(response instanceof Response)) {
+-        throw new TypeError('"response" must be an instance of Response');
++        // throw new TypeError('"response" must be an instance of Response');
+     }
+     if (response.status !== 200) {
+         let err;
+@@ -1150,7 +1150,7 @@ async function jwksRequest(as, options) {
+ }
+ async function processJwksResponse(response) {
+     if (!(response instanceof Response)) {
+-        throw new TypeError('"response" must be an instance of Response');
++        // throw new TypeError('"response" must be an instance of Response');
+     }
+     if (response.status !== 200) {
+         throw new OPE('"response" is not a conform JSON Web Key Set response');
+@@ -1457,7 +1457,7 @@ export async function processDeviceAuthorizationResponse(as, client, response) {
+     assertAs(as);
+     assertClient(client);
+     if (!(response instanceof Response)) {
+-        throw new TypeError('"response" must be an instance of Response');
++        // throw new TypeError('"response" must be an instance of Response');
+     }
+     if (response.status !== 200) {
+         let err;
