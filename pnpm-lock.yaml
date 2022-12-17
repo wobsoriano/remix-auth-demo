@@ -17,6 +17,7 @@ specifiers:
   '@types/react-dom': ^18.0.8
   eslint: ^8.27.0
   isbot: ^3.6.5
+  jose: ^4.11.1
   oauth4webapi: 2.0.5
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -28,6 +29,7 @@ dependencies:
   '@remix-run/react': 1.9.0_biqbaboplfbrettd7655fr4n2y
   '@remix-run/vercel': 1.9.0_biqbaboplfbrettd7655fr4n2y
   isbot: 3.6.5
+  jose: 4.11.1
   oauth4webapi: 2.0.5_nb6fwpvm42aqzj32isnb7o7qqe
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
