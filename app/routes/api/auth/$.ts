@@ -1,5 +1,5 @@
 import type { AuthOptions } from '@auth/core'
-import { RemixAuthHandler } from 'lib/auth'
+import { RemixAuthHandler } from 'lib/auth/server'
 import GithubProvider from '@auth/core/providers/github'
 
 const authOptions: AuthOptions = {
