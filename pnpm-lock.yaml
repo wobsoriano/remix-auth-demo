@@ -12,6 +12,7 @@ specifiers:
   '@remix-run/node': ^1.9.0
   '@remix-run/react': ^1.9.0
   '@remix-run/serve': ^1.9.0
+  '@remix-run/vercel': ^1.9.0
   '@types/react': ^18.0.25
   '@types/react-dom': ^18.0.8
   eslint: ^8.27.0
@@ -26,6 +27,7 @@ dependencies:
   '@remix-run/node': 1.9.0_biqbaboplfbrettd7655fr4n2y
   '@remix-run/react': 1.9.0_biqbaboplfbrettd7655fr4n2y
   '@remix-run/serve': 1.9.0_biqbaboplfbrettd7655fr4n2y
+  '@remix-run/vercel': 1.9.0_biqbaboplfbrettd7655fr4n2y
   isbot: 3.6.5
   oauth4webapi: 2.0.5_nb6fwpvm42aqzj32isnb7o7qqe
   react: 18.2.0
@@ -1907,6 +1909,18 @@ packages:
       react-dom: 18.2.0_react@18.2.0
       set-cookie-parser: 2.5.1
       source-map: 0.7.4
+
+  /@remix-run/vercel/1.9.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-pNtVUH6T5gJXgGk7UluK9iOwB+5QmB+UXDGMzyPic5ZGxqxWDTetIwqwLXgxV6xZvAfAClFE8Jf1kZXCUfE1HQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@vercel/node': ^1.8.3 || ^2.4.0
+    dependencies:
+      '@remix-run/node': 1.9.0_biqbaboplfbrettd7655fr4n2y
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
 
   /@remix-run/web-blob/3.0.4:
     resolution: {integrity: sha512-AfegzZvSSDc+LwnXV+SwROTrDtoLiPxeFW+jxgvtDAnkuCX1rrzmVJ6CzqZ1Ai0bVfmJadkG5GxtAfYclpPmgw==}
