@@ -12,9 +12,12 @@
     "@remix-run/node": "^1.9.0",
     "@remix-run/react": "^1.9.0",
     "isbot": "^3.6.5",
-    "oauth4webapi": "2.0.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "undici": "^5.14.0"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.9.0",
@@ -26,8 +29,8 @@
     "typescript": "^4.8.4"
   },
   "pnpm": {
-    "patchedDependencies": {
-      "oauth4webapi@2.0.5": "patches/oauth4webapi@2.0.5.patch"
+    "overrides": {
+      "undici": "5.14.0"
     }
   }
 }
