@@ -1,7 +1,8 @@
 import type { AuthOptions } from '@auth/core'
-import { Request as UndiciRequest } from 'undici'
 import { AuthHandler } from '@auth/core'
 import type { ActionArgs, LoaderArgs } from '@remix-run/node'
+import type { RequestInit as UndiciRequestInit} from 'undici';
+import { Request as UndiciRequest } from 'undici'
 import { installCrypto } from './crypto'
 
 installCrypto()
@@ -11,14 +12,8 @@ export function RemixAuthHandler(options: AuthOptions) {
   options.trustHost ??= Boolean(process.env.AUTH_TRUST_HOST)
 
   const handler = ({ request }: LoaderArgs | ActionArgs) => {
-
-    if (request.method === 'POST') {
-      request.duplex = 'half' as any
-    }
-
-    const newRequest = new UndiciRequest(request.url, request as any)
-
-    return AuthHandler(newRequest, options)
+    const requestCopy = new UndiciRequest(request.url, request as UndiciRequestInit)
+    return AuthHandler(requestCopy as unknown as Request, options)
   }
 
   return {
