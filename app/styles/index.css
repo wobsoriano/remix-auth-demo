@@ -19,6 +19,12 @@ a {
 hr {
   border: 1px solid #ddd;
 }
+button {
+  border: none;
+  text-decoration: underline;
+  font-family: inherit;
+  font-size: inherit;
+}
 
 .nojs-show {
   opacity: 1;

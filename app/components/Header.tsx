@@ -1,6 +1,7 @@
 import type { Session } from "@auth/core"
 import { NavLink, useFetcher } from "@remix-run/react";
 import { useEffect } from "react"
+import AuthButton from "./AuthButton";
 
 export default function Header() {
   const fetcher = useFetcher<Session>();
@@ -15,7 +16,7 @@ export default function Header() {
     <>
       <header>
         <div className="signedInStatus">
-          <p className="nojs-show loaded">
+          <div className="nojs-show loaded">
             {
               fetcher.data?.user ? <>
                 <span className="avatar" style={{ backgroundImage: `url('${fetcher.data.user?.image}')` }}></span>
@@ -23,14 +24,14 @@ export default function Header() {
                   <small>Signed in as</small><br />
                   <strong>{ fetcher.data?.user?.email ?? fetcher.data?.user?.name }</strong>
                 </span>
-                <a href="/api/auth/signout" className="button">Sign out</a>
+                <AuthButton type="signout" />
               </> : <>
               <span className="notSignedInText">You are not signed in</span>
-              <a href="/api/auth/signin" className="buttonPrimary">Sign in</a>
+              <AuthButton type="signin" />
               </>
             }
             
-          </p>
+          </div>
         </div>
         <nav>
           <ul className="navItems">
