@@ -24,10 +24,10 @@ export default function Header() {
                   <small>Signed in as</small><br />
                   <strong>{ fetcher.data?.user?.email ?? fetcher.data?.user?.name }</strong>
                 </span>
-                <AuthButton type="signout" />
+                <AuthButton type="signout" provider="github" />
               </> : <>
               <span className="notSignedInText">You are not signed in</span>
-              <AuthButton type="signin" />
+              <AuthButton type="signin" provider="github" />
               </>
             }
             

@@ -4,9 +4,10 @@ import { useEffect } from "react"
 
 type Props = {
   type: 'signin' | 'signout'
+  provider: 'github'
 }
 
-export default function SignOut({ type }: Props) {
+export default function SignOut({ type, provider }: Props) {
   const fetcher = useFetcher<{ csrfToken: string }>();
 
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function SignOut({ type }: Props) {
   }, [fetcher])
 
   return (
-    <Form reloadDocument action={`/api/auth/${type}/github`} method="post">
+    <Form reloadDocument action={`/api/auth/${type}/${provider}`} method="post">
       <input type="hidden" value="http://localhost:3000/" name="callbackUrl" />
       <input type="hidden" value={fetcher.data?.csrfToken ?? ''} name="csrfToken" />
       <button className={type === 'signin' ? 'buttonPrimary' : 'button'}>
